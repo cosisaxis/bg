@@ -5,7 +5,7 @@ import styledComponents from 'styled-components'
 
 
 const Container = styledComponents.div`
-   height: 60px;
+   height: 80px;
 `;
 const Wrapper = styledComponents.div`
     padding: 10px 20px; 
