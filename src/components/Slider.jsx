@@ -1,125 +1,116 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
-import { useState } from "react"
-import styledComponents from "styled-components"
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
+import { useState } from "react";
+import styled from "styled-components";
+import { sliderItems } from "../data";
 
 
-const Container = styledComponents.div`
+const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
   overflow: hidden;
-`
-const Wrapper = styledComponents.div`
-   height: 100%;
-   display: flex;
-   transform: translateX(0vw);
-`
-const Slide = styledComponents.div`
-   display: flex;
-   align-items: center;
-   width: 100vw;
-   height: 100vh;
-`
-const ImagesContainer = styledComponents.div`
-   height: 100%;
-   flex: 1;
-`
-const Image = styledComponents.img`
-   height: 80%;
-`
-const InformationContainer = styledComponents.div`
-    flex: 1;
-    padding: 50px;
-`
-const Name = styledComponents.h1`
-   font-size: 70px;
-`
-const Description = styledComponents.p`
-   margin: 40px 0px;
-   font-size: 20px;
-   font-weight: 500;
-   letter-spacing: 3px;
+`;
 
-`
-const Button = styledComponents.button`
-   padding: 10px;
-   font-size: 20px;
-   background-color: transparent;
-   cursor: pointer;
+const Arrow = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: #fff7f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: ${(props) => props.direction === "left" && "10px"};
+  right: ${(props) => props.direction === "right" && "10px"};
+  margin: auto;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 2;
+`;
 
-`
-const Arrow = styledComponents.div`
-   width: 50px;
-   height: 50px;
-   background-color: white;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: absolute;
-   top: 0;
-   bottom: 0;
-   left: ${props=> props.direction === 'left' && "10px"};
-   right: ${props=> props.direction === 'right' && "10px"};
-   margin: auto;
-   cursor: pointer;
-   opacity: 0.5;
-   z-index: 2;
-   
-`
+const Wrapper = styled.div`
+  height: 100%;
+  display: flex;
+  transition: all 1.5s ease;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
+`;
+
+const Slide = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+`;
+
+const ImgContainer = styled.div`
+  height: 100%;
+  flex: 1;
+`;
+
+const Image = styled.img`
+  height: 80%;
+`;
+
+const InfoContainer = styled.div`
+  flex: 1;
+  padding: 50px;
+`;
+
+const Title = styled.h1`
+  font-size: 70px;
+`;
+
+const Desc = styled.p`
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
+
 const Slider = () => {
-    const[slidingIndex, setSlidingIndex] = useState(0);
-    const clicker = (direction) =>{
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
 
-    };
   return (
-      <Container>
-          <Arrow direction='left' onClick={() => clicker("left")}>
-              <ArrowLeftOutlined />
-          </Arrow>
-          <Wrapper>
-             <Slide bg="f5fafd">
-              <ImagesContainer>
-                  <Image src="https://www.nakedwardrobe.com/media/catalog/product/cache/1/image/1800x/c9d61add4726113647d64de92311f176/n/a/naked__5222-edit.jpg" />
-              </ImagesContainer>
-              <InformationContainer>
-                  <Name>FALL SALE</Name>
-                  <Description>GET A 50% DISCOUNT FROM ALL OUR CATEGORIES</Description>
-                  <Button>SHOW NOW</Button>
+    <Container>
+      <Arrow direction="left" onClick={() => handleClick("left")}>
+        <ArrowLeftOutlined />
+      </Arrow>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.description}</Desc>
+              <Button>SHOW NOW</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
+      </Wrapper>
+      <Arrow direction="right" onClick={() => handleClick("right")}>
+        <ArrowRightOutlined />
+      </Arrow>
+    </Container>
+  );
+};
 
-              </InformationContainer>
-              </Slide>
-             <Slide bg="fcf1ed">
-              <ImagesContainer>
-                  <Image src="https://www.nakedwardrobe.com/media/catalog/product/cache/1/image/1800x/c9d61add4726113647d64de92311f176/n/a/naked__5222-edit.jpg" />
-              </ImagesContainer>
-              <InformationContainer>
-                  <Name>SUMMER SALE</Name>
-                  <Description>GET A 50% DISCOUNT FROM ALL OUR CATEGORIES</Description>
-                  <Button>SHOW NOW</Button>
-
-              </InformationContainer>
-              </Slide>
-             <Slide bg="fbf0f4">
-              <ImagesContainer>
-                  <Image src="https://www.nakedwardrobe.com/media/catalog/product/cache/1/image/1800x/c9d61add4726113647d64de92311f176/n/a/naked__5222-edit.jpg" />
-              </ImagesContainer>
-              <InformationContainer>
-                  <Name>FALL SALE</Name>
-                  <Description>GET A 50% DISCOUNT FROM ALL OUR CATEGORIES</Description>
-                  <Button>SHOW NOW</Button>
-
-              </InformationContainer>
-              </Slide>
-          </Wrapper>
-          <Arrow direction='right' onClick={() => clicker("right")} >
-              <ArrowRightOutlined />
-          </Arrow>
-
-      </Container>
-    
-  )
-}
-
-export default Slider
+export default Slider;
