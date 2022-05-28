@@ -31,7 +31,7 @@ const Button = styledComponents.button`
    border: none;
    padding: 10px;
    background-color: white;
-   color: red;
+   color: #FF1493;
    cursor: pointer;
    font-weight: bold;
 `;
