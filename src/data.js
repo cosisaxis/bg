@@ -40,3 +40,30 @@ export const categories = [
         title: "Bodysuits",
     },
 ]
+
+export const popularItems = [
+    {
+        id: 1,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+    {
+        id: 2,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+    {
+        id: 3,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+    {
+        id: 4,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+    {
+        id: 5,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+    {
+        id: 6,
+        img: 'https://cdn-images.farfetch-contents.com/17/55/50/09/17555009_39198664_1000.jpg'
+    },
+]
