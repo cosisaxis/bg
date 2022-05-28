@@ -22,3 +22,21 @@ export const sliderItems = [
         bg: "fbf0f4"
     },
 ]
+
+export const categories = [
+    {
+        id: 1,
+        img: "https://www.nakedwardrobe.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/n/a/naked_8699-edit_1.jpg",
+        title: "Tops",
+    },
+    {
+        id: 2,
+        img: "https://images.unsplash.com/photo-1615584046840-11cbf13c0238?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZHJlc3Nlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        title: "Dresses",
+    },
+    {
+        id: 3,
+        img: "https://www.nakedwardrobe.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/n/a/naked_5213-edit-edit.jpg",
+        title: "Bodysuits",
+    },
+]
