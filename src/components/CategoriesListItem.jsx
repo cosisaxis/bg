@@ -9,7 +9,7 @@ const Container = styledComponents.div`
 const Image = styledComponents.img`
   width: 100%; 
   height: 100%;
-  object-fit: cover;
+  object-fit: fit;
 `;
 const Information = styledComponents.div`
 position: absolute;
@@ -42,7 +42,7 @@ const CategoriesListItem = ({ item }) => {
       <Image src={item.img} />
       <Information>
         <Title>{item.title}</Title>
-        <Button>BUY</Button>
+        <Button>BUY NOW</Button>
       </Information>
     </Container>
   );
