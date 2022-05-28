@@ -9,7 +9,7 @@ const Container = styledComponents.div`
 const Image = styledComponents.img`
   width: 100%; 
   height: 100%;
-  object-fit: fit;
+  object-fit: cover;
 `;
 const Information = styledComponents.div`
 position: absolute;
