@@ -104,15 +104,15 @@ const Footer = () => {
         <Title>Navigation</Title>
         <List>
           <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
-          <ListItems>Home</ListItems>
+          <ListItems>Hair</ListItems>
+          <ListItems>Accessories</ListItems>
+          <ListItems>Men's Fashion</ListItems>
+          <ListItems>Women's Fashion</ListItems>
+          <ListItems>My Account</ListItems>
+          <ListItems>Wishlist</ListItems>
+          <ListItems>Order Tracking</ListItems>
+          <ListItems>Wishlist</ListItems>
+          <ListItems>Terms</ListItems>
         </List>
       </Center>
       <Right>
