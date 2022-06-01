@@ -7,8 +7,8 @@ const Container = styledComponents.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #FFB6C1;
-  color: white;
+  background-color: #fcf5f5;
+  color: black;
 `;
 const Title = styledComponents.h1`
   font-size: 70px;
