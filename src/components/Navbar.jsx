@@ -6,7 +6,7 @@ import { mobile } from "../responsiviness";
 
 const Container = styledComponents.div`
    height: 80px;
-   ${mobile({ height: "50px"})}
+   ${mobile({ height: "70px"})}
 `;
 const Wrapper = styledComponents.div`
     padding: 10px 20px; 
@@ -14,6 +14,7 @@ const Wrapper = styledComponents.div`
     align-items: center;
     justify-content: space-between;
     ${mobile({ padding: "10px 0px" })}
+   
 `;
 const Left = styledComponents.div`
    flex: 1;
