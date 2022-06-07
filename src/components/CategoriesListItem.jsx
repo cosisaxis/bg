@@ -1,5 +1,5 @@
 import styledComponents from "styled-components";
-
+import { mobile } from "../responsiviness";
 const Container = styledComponents.div`
   flex: 1;
   margin: 3px;
@@ -10,6 +10,7 @@ const Image = styledComponents.img`
   width: 100%; 
   height: 100%;
   object-fit: cover;
+  ${mobile({ height: "20vh" })}
 `;
 const Information = styledComponents.div`
 position: absolute;

@@ -9,9 +9,10 @@ import {
   Twitter,
 } from "@material-ui/icons";
 import styledComponents from "styled-components";
-
+import { mobile } from "../responsiviness";
 const Container = styledComponents.div`
  display: flex;
+ ${mobile({ flexDirection: "column" })}
 `;
 const Left = styledComponents.div`
  flex: 1;
@@ -41,6 +42,7 @@ const Socials = styledComponents.div`
 const Center = styledComponents.div`
  flex: 1;
  padding: 20px;
+ ${mobile({ display: "none" })}
 `;
 
 const Title = styledComponents.h3`
@@ -62,6 +64,7 @@ const ListItems = styledComponents.li`
 const Right = styledComponents.div`
  flex: 1;
  padding: 20px;
+ ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
 const ContactItem = styledComponents.div`

@@ -1,11 +1,12 @@
 import styledComponents from "styled-components"
 import { categories } from "../data"
 import CategoriesListItem from "./CategoriesListItem"
-
+import { mobile } from "../responsiviness"
 
 const Container = styledComponents.div`
   display: flex;
   padding: 20px;
+  ${mobile({ padding: "0px", flexDirection:"column" })}
 `
 
 const Categories = () => {
