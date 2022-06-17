@@ -1,14 +1,14 @@
 export const sliderItems = [
     {
         id:1,
-        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/n/a/naked_6172-edit_3.jpg",
+        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/5513ddbb0078207de620530b25cacea4/n/a/naked_2051-edit_7.jpg",
         title:"Summer Sale",
         description: "THIS IS OUR NEW SALE, DONT MISS OUT ON 30%",
         bg: "f5fafd"
     },
     {
         id:2,
-        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/n/a/naked_25502-edit_1.jpg",
+        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/5513ddbb0078207de620530b25cacea4/s/h/shot1_0717-edit_6.jpg",
         title: "Autumn Sale",
         description: "THIS IS OUR NEW SALE, DONT MISS OUT ON 30%",
         bg: "fcf1ed"
@@ -16,7 +16,7 @@ export const sliderItems = [
     },
     {
         id:3,
-        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/1/small_image/9df78eab33525d08d6e5fb8d27136e95/n/a/naked_31614-edit.jpg",
+        img:"https://www.nakedwardrobe.com/media/catalog/product/cache/5513ddbb0078207de620530b25cacea4/n/a/naked_7270-edit_1.jpg",
         title: "Winter Sale",
         description: "THIS IS OUR NEW SALE, DONT MISS OUT ON 30%",
         bg: "fbf0f4"
