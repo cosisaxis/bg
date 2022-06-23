@@ -5,24 +5,29 @@ import Deals from "../components/Deals";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
+import { mobile } from "../responsiviness";
 
 const Container = styledComponents.div`
 `;
 const Wrapper = styledComponents.div`
   padding: 50px;
   display: flex;
+  ${mobile({padding: "10px", flexDirection: "column" })}
 `;
 const ImageContainer = styledComponents.div`
   flex: 1;
   padding: 0px 50px;
+  
 `;
 const Image = styledComponents.img`
  width: 100%;
  object-fit: cover;
  height: 90vh;
+ ${mobile({height: "40vh" })}
 `;
 const InfoContainer = styledComponents.div`
  flex: 1;
+ ${mobile({padding: "10px" })}
 `;
 const Title = styledComponents.h2`
 font-weight: bold;
@@ -39,6 +44,7 @@ const FilteringContainer = styledComponents.div`
  margin: 30px 0px;
  display: flex;
  justify-content: space-between;
+ ${mobile({width: "100%" })}
 `;
 const Filter = styledComponents.div`
  display: flex;
@@ -66,6 +72,7 @@ width: 50%;
 display: flex;
 justify-content: center;
 align-items: center;
+${mobile({width: "100%" })}
 `
 const PriceContainer = styledComponents.div`
 display: flex;
@@ -100,7 +107,7 @@ const Product = () => {
       <Deals />
       <Wrapper>
         <ImageContainer>
-          <Image src="https://www.nakedwardrobe.com/media/catalog/product/cache/1/image/1800x/c9d61add4726113647d64de92311f176/n/a/naked_0843-edit_6.jpg" />
+          <Image src="https://www.nakedwardrobe.com/media/catalog/product/cache/5513ddbb0078207de620530b25cacea4/l/o/look6_1279-edit.jpeg" />
         </ImageContainer>
         <InfoContainer>
           <Title>Dresses</Title>
