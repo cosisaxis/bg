@@ -4,10 +4,12 @@ import styledComponents from 'styled-components'
 import Deals from '../components/Deals'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import { mobile } from '../responsiviness'
 
 const Container = styledComponents.div``
 const Wrapper = styledComponents.div`
 padding: 20px
+${mobile({padding: "10px" })}
 `
 const Name = styledComponents.h1`
 font-weight: 300;
@@ -29,7 +31,9 @@ padding: 10px;
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
 `
-const UpTexts = styledComponents.div``
+const UpTexts = styledComponents.div`
+ ${mobile({display: "none" })}
+`
 const UpText = styledComponents.span`
 text-decoration: underline;
 cursor: pointer;
@@ -38,6 +42,7 @@ margin: 0px 20px;
 const Bottom = styledComponents.div`
 display: flex;
 justify-content: space-between;
+${mobile({flexDirection: "column" })}
 `
 const Information = styledComponents.div`
 flex: 3;
@@ -45,6 +50,7 @@ flex: 3;
 const Product = styledComponents.div`
 display: flex;
 justify-content: space-between;
+${mobile({flexDirection: "column" })}
 `
 const ProductDetail = styledComponents.div`
 flex: 2;
@@ -87,10 +93,12 @@ margin-bottom: 20px;
 const ProductAmt = styledComponents.div`
 font-size: 24px;
 margin: 5px;
+${mobile({margin: "5px 15px" })}
 `
 const ProductPrice = styledComponents.div`
 font-size: 30px;
 font-weight: 200;
+${mobile({marginBottom: "20px" })}
 `
 const Hr = styledComponents.hr`
 background-color: #eee;
